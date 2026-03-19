@@ -61,3 +61,29 @@ cleaned = [text.strip().lower() for text in raw_inputs]
 
 print(cleaned)
 # ['what is ai?', 'tell me about rag', 'langchain']
+
+
+# EXERCISE — RAG pipeline filter
+# You just got back 5 documents from a vector database
+# Your job: filter and extract only the relevant ones
+
+search_results = [
+    {"text": "LangChain is a framework for LLM apps", "score": 0.95},
+    {"text": "Python was created by Guido van Rossum", "score": 0.42},
+    {"text": "RAG combines retrieval with generation", "score": 0.88},
+    {"text": "Chennai has a hot climate", "score": 0.31},
+    {"text": "Embeddings represent text as vectors", "score": 0.79},
+]
+
+# TASK 1: Extract ALL texts (regardless of score)
+all_texts = [doc["text"] for doc in search_results]
+
+# TASK 2: Filter docs with score above 0.75
+relevant_docs = [doc for doc in search_results if doc["score"] > 0.75]
+
+# TASK 3: Extract ONLY the text from relevant docs
+relevant_texts = [doc["text"] for doc in search_results if doc["score"] > 0.75]
+
+print("All texts:", all_texts)
+print("Relevant docs:", relevant_docs)
+print("Relevant texts:", relevant_texts)
