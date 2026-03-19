@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "What is RAG?"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG stands for Retrieval Augmented Generation."
+  },
+  {
+    "role": "user",
+    "content": "How does it work?"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "What is LangChain?"
+  },
+  {
+    "role": "assistant",
+    "content": "LangChain is a framework for LLM apps."
+  },
+  {
+    "role": "user",
+    "content": "What is RAG?"
+  }
+]
