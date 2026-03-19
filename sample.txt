@@ -1,0 +1,5 @@
+LangChain is a framework for building LLM applications.
+It supports chains, agents, and memory modules.
+RAG stands for Retrieval Augmented Generation.
+FAISS is a vector database for similarity search.
+Chennai is a major tech hub in South India.
