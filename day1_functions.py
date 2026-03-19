@@ -51,3 +51,41 @@ def answer_question(user_question):
 
 final_answer = answer_question("What is RAG?")
 print(final_answer)  # "This is a LLM response to: You are a helpful assistant. Answer this: What is RAG?"
+
+
+# EXERCISE — Build a token budget checker
+# Real problem: LLMs have a context window limit
+# If input is too long, you need to warn the user
+
+def check_token_budget(prompt, max_allowed_tokens):
+    # Rough estimate: 1 token ≈ 4 characters
+    estimated_tokens = int(len(prompt) / 4)
+    
+    if estimated_tokens > max_allowed_tokens:
+        return f"Warning: Prompt exceeds token limit. Estimated: {estimated_tokens}, Limit: {max_allowed_tokens}"
+    else:
+        return f"OK:  {estimated_tokens} tokens used out of {max_allowed_tokens} allowed."
+
+# Test it with these two calls
+result1 = check_token_budget("Tell me about AI", 500)
+result2 = check_token_budget("Tell me about AI " * 200, 500)  # very long prompt
+
+print(result1)
+print(result2)
+
+
+
+
+# def check_token_budget(prompt, max_allowed_tokens=1024):  # ← default value!
+#     estimated_tokens = int(len(prompt) / 4)
+#     is_over_budget = estimated_tokens > max_allowed_tokens  # ← named boolean
+
+#     if is_over_budget:
+#         overage = estimated_tokens - max_allowed_tokens     # ← how much over?
+#         return f"⚠️ Over budget by {overage} tokens! Trim your prompt."
+#     else:
+#         remaining = max_allowed_tokens - estimated_tokens   # ← how much left?
+#         return f"✅ OK — {remaining} tokens still available."
+
+# print(check_token_budget("Tell me about AI"))
+# print(check_token_budget("Tell me about AI " * 200))
