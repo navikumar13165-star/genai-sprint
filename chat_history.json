@@ -22,5 +22,37 @@
   {
     "role": "assistant",
     "content": "RAG stands for Retrieval Augmented Generation. It retrieves relevant documents and passes them to the LLM as context."
+  },
+  {
+    "role": "user",
+    "content": "explain embedding"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG stands for Retrieval Augmented Generation. It retrieves relevant documents and passes them to the LLM as context."
+  },
+  {
+    "role": "user",
+    "content": "explain embeddings"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG stands for Retrieval Augmented Generation. It retrieves relevant documents and passes them to the LLM as context."
+  },
+  {
+    "role": "user",
+    "content": "what is rag"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG stands for Retrieval Augmented Generation. It retrieves relevant documents and passes them to the LLM as context."
+  },
+  {
+    "role": "user",
+    "content": "explain embeddings"
+  },
+  {
+    "role": "assistant",
+    "content": "Embeddings are numerical representations of text. Similar texts have similar embeddings \u2014 measured using cosine similarity."
   }
 ]

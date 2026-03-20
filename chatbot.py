@@ -95,7 +95,8 @@ If you don't know something, say so honestly."""
 # print(prompt)
 
 # ── Function 4: Simulate an LLM API call ───────────
-def simulate_llm(prompt, attempt=1):
+def simulate_llm(prompt, user_input="", attempt=1):
+    
     # Simulate network delay (real APIs take 1-3 seconds)
     time.sleep(0.5)
 
@@ -104,7 +105,7 @@ def simulate_llm(prompt, attempt=1):
         raise ConnectionError("API rate limit hit — try again")
 
     # Smart responses based on keywords in prompt
-    prompt_lower = prompt.lower()
+    prompt_lower = user_input.lower() 
 
     if "langchain" in prompt_lower:
         return "LangChain is a framework for building LLM-powered apps. It provides chains, agents, and memory modules."
@@ -128,12 +129,12 @@ def simulate_llm(prompt, attempt=1):
         return f"That's a great question! As {BOT_NAME}, I'm currently in simulation mode. Real API coming on Day 6!"
 
 
-def call_llm_with_retry(prompt):
+def call_llm_with_retry(prompt, user_input=""):
     attempt = 0
 
     while attempt < MAX_RETRIES:
         try:
-            response = simulate_llm(prompt, attempt + 1)
+            response = simulate_llm(prompt, user_input, attempt + 1)
             return response
 
         except ConnectionError as e:
@@ -208,7 +209,7 @@ def chat_loop(history):
 
             # Step 5 — Call the LLM
             print(f"\n{BOT_NAME}: ", end="", flush=True)
-            response = call_llm_with_retry(prompt)
+            response = call_llm_with_retry(prompt, user_input)
             print(response)
             print()
 
