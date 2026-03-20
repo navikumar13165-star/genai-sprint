@@ -179,6 +179,30 @@ def chat_loop(history):
                 print(f"\n👋 {BOT_NAME}: Goodbye! Your chat has been saved.\n")
                 break
 
+            if user_input == "/history":
+                if not history:
+                    print("📭 No history yet!\n")
+                else:
+                    print("\n📜 Last 5 messages:")
+                    print("-" * 30)
+                # Show last 5 messages
+                    recent = history[-5:] if len(history) >= 5 else history
+                    for msg in recent:
+                        role = "You" if msg["role"] == "user" else BOT_NAME
+                        print(f"  {role}: {msg['content']}")
+                    print("-" * 30 + "\n")
+                    continue 
+            
+            if user_input == "/clear":
+                confirm = input("Are you sure you want to clear the history? (yes/no): ").strip().lower()
+                if confirm == "yes":
+                    history = []
+                    save_history(history)
+                    print("✅ History cleared!\n")
+                else:
+                    print("⚠️ Clear cancelled.\n")
+                continue 
+
             # Step 4 — Build the prompt with full history
             prompt = build_prompt(history, user_input)
 
@@ -207,6 +231,7 @@ def chat_loop(history):
             print(f"\n❌ Unexpected error: {e}")
             print("Continuing chat...\n")
             continue
+        
 
     return history
 
@@ -244,3 +269,5 @@ def main():
 # ── Entry point ────────────────────────────────────
 if __name__ == "__main__":
     main()
+
+
