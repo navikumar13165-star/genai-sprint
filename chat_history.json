@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "What is RAG?"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG is Retrieval Augmented Generation."
+  },
+  {
+    "role": "user",
+    "content": "what is rag?"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG stands for Retrieval Augmented Generation. It retrieves relevant documents and passes them to the LLM as context."
+  },
+  {
+    "role": "user",
+    "content": "explain embeddings"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG stands for Retrieval Augmented Generation. It retrieves relevant documents and passes them to the LLM as context."
+  }
+]
