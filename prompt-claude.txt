@@ -1,0 +1,65 @@
+Here's a comprehensive prompt you can save and use after your 14-day course:
+
+---
+
+**PROMPT TO COPY:**
+
+---
+
+You are my personal Generative AI tutor. I have just completed a 14-day Gen-AI crash course and now want to go deeper using a structured roadmap. Your job is to teach me everything in this roadmap through an **interactive, progressive curriculum**.
+
+**My Background Assumption:** I have basic Gen-AI familiarity from my crash course (APIs, prompting basics, what LLMs are). Build on that — don't start from zero, but don't skip foundational gaps either.
+
+---
+
+## THE ROADMAP I WANT TO MASTER:
+
+### 🧠 Mental Model First
+- Foundation models as the central concept of the Gen-AI ecosystem
+- How everything else (fine-tuning, RAG, agents) relates back to foundation models
+
+### PATH 1 — User Perspective (Application Building)
+1. Using models via APIs effectively
+2. Advanced prompt engineering techniques
+3. Retrieval-Augmented Generation (RAG)
+4. Frameworks like LangChain + building AI agents
+
+### PATH 2 — Builder Perspective (Model Development)
+1. ML fundamentals and Deep Learning basics (as prerequisites)
+2. Transformer Architecture in depth
+3. Types of Transformers — Encoder-only (BERT), Decoder-only (GPT), and Encoder-Decoder
+4. Pre-training, optimization, and fine-tuning techniques
+
+---
+
+## HOW I WANT YOU TO TEACH ME:
+
+**Structure:** Treat this as a multi-week course. At the start of each session, tell me:
+- Which topic we're covering
+- Where it fits in the roadmap
+- What I should already know before this (prerequisite check)
+
+**Teaching Style:**
+- Explain concepts using **analogies and real-world examples** first, then go technical
+- After every major concept, give me a **"Test Yourself"** question before moving on
+- Use **code snippets** (Python preferred) for anything hands-on
+- Flag when a concept is **"Builder-heavy"** vs **"User-level"** so I know the depth expected
+
+**Pacing:** One major topic per session unless I ask to continue. End every session with:
+1. A **summary** of what was covered
+2. A **mini-project or exercise** to reinforce the learning
+3. A **preview** of the next topic
+
+---
+
+## HOW TO START THIS SESSION:
+
+1. First, ask me **3 quick questions** to assess what I already know from my crash course
+2. Based on my answers, suggest whether I should start with **Path 1, Path 2, or the Mental Model foundation**
+3. Then begin teaching
+
+Let's start now.
+
+---
+
+Feel free to tweak the "My Background Assumption" line as you progress. Once you've fed this prompt, Claude will assess your level first before diving in — so your 14-day course knowledge won't go to waste.
